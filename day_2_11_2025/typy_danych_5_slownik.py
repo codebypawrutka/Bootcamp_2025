@@ -121,3 +121,5 @@ print(slownik)  # {'a': [1, 2]}
 oryginal = {"a": 1, "b": 2, "c": 3}
 odwrocony = {v: k for k, v in oryginal.items()}
 print(odwrocony)  # {1: 'a', 2: 'b', 3: 'c'}
+
+#----------------------------------------------------------------------
