@@ -123,3 +123,111 @@ odwrocony = {v: k for k, v in oryginal.items()}
 print(odwrocony)  # {1: 'a', 2: 'b', 3: 'c'}
 
 #----------------------------------------------------------------------
+my_dict5 = {"Name": "Radek","ID":12345, "DDB": 1991, 'Address': "Warsaw"}
+print(my_dict5) #{'Name': 'Radek', 'ID': 12345, 'DDB': 1991, 'Address': 'Warsaw'}
+print(my_dict5['DDB']) #1991
+print(my_dict5.get('DDB')) # 1991
+
+# nadpisanie wartości dla klucza
+my_dict5['DDB'] = '1980'
+print(my_dict5) #{'Name': 'Radek', 'ID': 12345, 'DDB': '1980', 'Address': 'Warsaw'}
+print(type(my_dict5['DDB']))  # <class 'str'>
+
+my_dict5['Address'] = "Warsaw Centrum"
+print(my_dict5) # {'Name': 'Radek', 'ID': 12345, 'DDB': '1980', 'Address': 'Warsaw Centrum'}
+
+dict1 = {"DDB": 1995}
+print(dict1) # {'DDB': 1995}
+print(type(dict1)) # <class 'dict'>
+
+#update słownik innym słownikiem
+my_dict5.update(dict1)
+print(my_dict5)
+#{'Name': 'Radek', 'ID': 12345, 'DDB': 1995, 'Address': 'Warsaw Centrum'}
+
+dict2 = {'cpi': 3.41} # float, liczby
+print(dict2) #{'cpi': 3.41}
+
+# update słownika
+# jesli klucz w docelowym słowniku nieistnieje zostanie dodany
+# docelowy słownik my_dict5
+
+my_dict5.update(dict2)
+print(my_dict5)
+#{'Name': 'Radek', 'ID': 12345, 'DDB': 1995, 'Address': 'Warsaw Centrum', 'cpi': 3.41}
+
+# usuniecie elementu ze słownika
+print(my_dict5.pop("cpi")) # {'Name': 'Radek', 'ID': 12345, 'DDB': 1995, 'Address': 'Warsaw Centrum', 'cpi': 3.41}   3.41
+
+#usunięcie ostatniego elementu ze słownika
+print(my_dict5.popitem())
+print(my_dict5) #('Address', 'Warsaw Centrum')
+#{'Name': 'Radek', 'ID': 12345, 'DDB': 1995}
+
+#usunięcie po kluczu
+del my_dict5['ID']
+print(my_dict5)
+
+#usunięcie wszystkich elementów ze słownika
+
+my_dict5.clear()
+print(my_dict5)
+
+# usunięcie z pamięci
+del my_dict5
+# my_dict5 nie istnieje - został usunięty z pamięci
+
+# zamiana klucza w słowniku
+
+
+
+# kopiowanie słownika
+my_dict5 = {'Name': 'Radek', 'ID': 12345, 'DDB': 1995, 'Address': 'Warsaw Centrum', 'cpi': 3.41}
+#kopia referencji
+my_dict5_copy_ref = my_dict5
+print(id(my_dict5_copy_ref))
+print(id(my_dict5))
+
+# kopia elementów słownka do drugiego słownika
+my_dict5_copy = my_dict5.copy()
+my_dict5
+
+
+# napisac program który bedzie dzialal jak słownik  angielsko - polski
+# wyświetla dostępne słowa
+# pobiera słowo od użytkownika
+# wyświetla tłumaczenie
+# input() - pobiera dane od użytkownika
+
+#odp = input("Podaj imię")
+#print(odp)
+
+
+
+slownik = {
+    "book": "książka",
+    "pencil": "ołówek",
+    "house": "dom",
+    "red": "czerwony"
+}
+wyraz = input("Podaj  słowo do tłumaczenia: ").lower()
+print("Po angielsku:", slownik.get(wyraz, "Brak tłumaczenia"))
+
+ang_pol = {'name': 'imie', "cat": "kot", 'water': "woda"}
+print('---------Słownik pol-----------')
+print("Mamy takie slowko w slowniku", ang_pol.keys())
+odp = input("Podaj słowko do przetłumaczenia")
+
+print(f"{odp.strip().casefold()} to: {ang_pol[odp.strip().casefold())}")
+print(f"{odp.strip().casefold()} to: {ang_pol[odp.strip().casefold(), "NIe ma w słowniku")}")
+
+ a= input("Podaj liczbe")
+ print(a)
+ a = float(input"Podaj liczbe")
+
+
+
+
+
+
+

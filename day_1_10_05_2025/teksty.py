@@ -75,6 +75,7 @@ print(tekst.count("i", 0, 4))  # 1 wystepuje 1 raz
 print(tekst.count("j", 0, 4))  # wystepuje 0 razy bo indeksy 0123
 print(tekst.index("j"))  # 4
     
+
 print(my_str2)  # ***Hello****World***
 # zamiana tekstu
 print(my_str2.replace("He", 'Ho'))  # ***Hollo****World*** Funkcja replace() w Pythonie służy do zamiany fragmentów tekstu (ciągów znaków) w stringach.
